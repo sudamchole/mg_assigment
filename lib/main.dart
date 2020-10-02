@@ -62,6 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Container(alignment:Alignment.centerLeft,child: Text("Select a region",style:TextStyle(fontSize: 17,fontWeight: FontWeight.w500),textAlign: TextAlign.start,)),
               ),
               ListView.builder(
+                physics: const NeverScrollableScrollPhysics(),
                 // Let the ListView know how many items it needs to build.
                 itemCount: regionList.length,
                 shrinkWrap: true,
@@ -82,6 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 visible: countryVisibility,
                 child: listModel.isNotEmpty? ListView.builder(
                   // Let the ListView know how many items it needs to build.
+                  physics: const NeverScrollableScrollPhysics(),
                   itemCount: listModel.length,
                   shrinkWrap: true,
                   // Provide a builder function. This is where the magic happens.
